@@ -678,7 +678,7 @@ h2 {
 }
 
 .services-header-copy {
-  max-width: 531px;
+  max-width: 620px;
 }
 
 .services .section-label {
@@ -696,14 +696,9 @@ h2 {
 }
 
 .services h2 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 56px;
-  font-weight: 700;
-  height: 150px;
-  letter-spacing: 0;
-  line-height: 100%;
-  max-width: 531px;
-  width: 531px;
+  font-size: clamp(3.2rem, 5.2vw, 5.25rem);
+  line-height: 1.02;
+  max-width: 620px;
 }
 
 .services-header .dark-button {
@@ -1106,12 +1101,6 @@ textarea {
 
   .skills h2 {
     font-size: clamp(2.6rem, 14vw, 4rem);
-  }
-
-  .services h2 {
-    font-size: clamp(2.6rem, 14vw, 4rem);
-    height: auto;
-    width: 100%;
   }
 
   .skills .section-label {
