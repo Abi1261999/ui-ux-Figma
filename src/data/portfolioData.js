@@ -1,4 +1,10 @@
 import heroPortrait from '../assets/pdf-image-1.png';
+import portfolioProject from '../assets/projects/project-source-5.png';
+import fashionMobileProject from '../assets/projects/project-source-3.png';
+import realEstateProject from '../assets/projects/project-source-6.png';
+import managementProject from '../assets/projects/project-source-2.png';
+import fashionShopProject from '../assets/projects/project-source-4.png';
+import petProject from '../assets/projects/project-source-1.png';
 
 export const images = {
   profile: heroPortrait,
@@ -20,45 +26,45 @@ export const navigationItems = [
 export const projects = [
   {
     number: '01',
-    title: 'Portfolio',
-    category: 'Web Design',
-    accent: '#998bff',
-    mockup: ['Design case study', 'Mobile wireframes', 'Landing page'],
+    title: 'Portflio',
+    tags: ['UI-UX Designer', 'Product Design'],
+    image: portfolioProject,
+    imageAlt: 'Portfolio website design screens',
   },
   {
     number: '02',
-    title: 'Fashion App',
-    category: 'App Design',
-    accent: '#d2a267',
-    mockup: ['Shopping flow', 'Product cards', 'Checkout UI'],
+    title: 'fashion App',
+    tags: ['UI-UX Designer', 'Product Design'],
+    image: fashionMobileProject,
+    imageAlt: 'Fashion mobile app design screens',
   },
   {
     number: '03',
     title: 'Real State web',
-    category: 'Dashboard',
-    accent: '#79a6c9',
-    mockup: ['Property search', 'Map cards', 'Analytics'],
+    tags: ['UI-UX Designer', 'Product Design'],
+    image: realEstateProject,
+    imageAlt: 'Real estate website dashboard design',
   },
   {
     number: '03',
-    title: 'Management Web',
-    category: 'Admin UI',
-    accent: '#f2b26b',
-    mockup: ['Charts', 'Kanban board', 'Team tasks'],
+    title: 'Mangement Web',
+    tags: ['Ui Design', 'Prototyping'],
+    image: managementProject,
+    imageAlt: 'Management web app dashboard design',
   },
   {
     number: '04',
-    title: 'Fashion App',
-    category: 'UX Research',
-    accent: '#d7b28d',
-    mockup: ['Moodboard', 'Style guide', 'Photo grid'],
+    title: 'fashion App',
+    tags: ['UI-UX Designer', 'Product Design'],
+    image: fashionShopProject,
+    imageAlt: 'Fashion ecommerce website design',
   },
   {
     number: '06',
     title: 'Pet App',
-    category: 'Mobile App',
-    accent: '#ec8d76',
-    mockup: ['Pet profile', 'Care schedule', 'Marketplace'],
+    tags: ['UI-UX Designer', 'Product Design'],
+    image: petProject,
+    imageAlt: 'Pet app and website selected work screens',
   },
 ];
 

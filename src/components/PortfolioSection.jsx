@@ -11,7 +11,7 @@ function PortfolioSection() {
           <h2>Projects and practice</h2>
         </div>
         <a className="dark-button" href="#contact">
-          See more
+          See More
         </a>
       </div>
       <div className="project-grid">
