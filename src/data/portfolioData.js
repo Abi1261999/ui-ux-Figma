@@ -5,6 +5,12 @@ import realEstateProject from '../assets/projects/frame17/frame17-source-1.png';
 import managementProject from '../assets/projects/frame19/frame19-source-3.png';
 import fashionShopProject from '../assets/projects/frame19/frame19-source-2.png';
 import petProject from '../assets/projects/frame19/frame19-source-1.png';
+import figmaIcon from '../assets/skills/figma-icon.png';
+import xdIcon from '../assets/skills/xd-icon.png';
+import afterEffectsIcon from '../assets/skills/after-effects-icon.png';
+import photoshopIcon from '../assets/skills/photoshop-icon.png';
+import html5Icon from '../assets/skills/html5-icon.png';
+import css3Icon from '../assets/skills/css3-icon.png';
 
 export const images = {
   profile: heroPortrait,
@@ -69,12 +75,12 @@ export const projects = [
 ];
 
 export const skills = [
-  { label: 'Figma', color: '#ff7262' },
-  { label: 'Xd', color: '#ff61f6' },
-  { label: 'Ae', color: '#9f7aea' },
-  { label: 'Ps', color: '#31a8ff' },
-  { label: 'Html5', color: '#f16529' },
-  { label: 'Css3', color: '#2965f1' },
+  { label: 'figma', icon: figmaIcon },
+  { label: 'Xd', icon: xdIcon },
+  { label: 'Af effects', icon: afterEffectsIcon },
+  { label: 'Photoshop', icon: photoshopIcon },
+  { label: 'html5', icon: html5Icon },
+  { label: 'Css3', icon: css3Icon },
 ];
 
 export const services = [

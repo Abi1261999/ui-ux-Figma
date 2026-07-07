@@ -601,42 +601,67 @@ h2 {
   padding-inline: 24px;
 }
 
+.skills {
+  background: #f9f4f0;
+  display: grid;
+  gap: 40px;
+  max-width: 1440px;
+  min-height: 744px;
+  padding: 56px 80px;
+  width: 100%;
+}
+
+.skills .section-label {
+  color: #302d2a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.skills .section-label span {
+  background: #302d2a;
+  width: 32px;
+}
+
 .skills h2 {
-  max-width: 480px;
+  font-size: clamp(3rem, 4.1vw, 4.5rem);
+  line-height: 1.08;
+  max-width: 520px;
 }
 
 .skill-grid {
   display: grid;
-  gap: 22px;
+  gap: 24px;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .skill-card {
   align-items: center;
+  background: rgba(255, 255, 255, 0.78);
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 100px 90px rgba(43, 37, 32, 0.08);
   display: grid;
-  gap: 12px;
-  min-height: 130px;
-  padding: 22px 14px;
+  gap: 24px;
+  min-height: 170px;
+  padding: 34px 20px 30px;
   place-items: center;
 }
 
-.skill-card span {
-  align-items: center;
-  background: var(--skill-color);
-  border-radius: 8px;
-  color: #fff;
-  display: flex;
-  font-size: 12px;
-  font-weight: 900;
-  height: 38px;
-  justify-content: center;
-  text-transform: uppercase;
-  width: 38px;
+.skill-card img {
+  height: 48px;
+  object-fit: contain;
+  width: 48px;
 }
 
 .skill-card strong {
-  font-size: 13px;
+  color: #423d39;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+  line-height: 1;
 }
 
 .service-layout {
@@ -878,6 +903,11 @@ textarea {
     padding: 48px 40px;
   }
 
+  .skills {
+    min-height: auto;
+    padding: 48px 40px;
+  }
+
   .hero-center {
     display: none;
   }
@@ -916,12 +946,16 @@ textarea {
   }
 
   .project-card {
+    height: auto;
     min-height: 560px;
-    padding: 26px;
   }
 
   .skill-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skill-card {
+    min-height: 160px;
   }
 }
 
@@ -981,6 +1015,12 @@ textarea {
     padding: 40px 18px;
   }
 
+  .skills {
+    gap: 32px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
   .portfolio-section .section-heading {
     align-items: flex-start;
     flex-direction: column;
@@ -988,6 +1028,14 @@ textarea {
 
   .portfolio-section h2 {
     font-size: clamp(2.6rem, 14vw, 4rem);
+  }
+
+  .skills h2 {
+    font-size: clamp(2.6rem, 14vw, 4rem);
+  }
+
+  .skills .section-label {
+    font-size: 17px;
   }
 
   .trusted .section-label {
@@ -1046,7 +1094,6 @@ textarea {
 
   .project-card {
     min-height: 520px;
-    padding: 22px;
   }
 
   .project-heading span {
@@ -1064,6 +1111,19 @@ textarea {
   .project-card button {
     min-height: 38px;
     width: 100%;
+  }
+
+  .skill-card {
+    min-height: 150px;
+  }
+
+  .skill-card img {
+    height: 44px;
+    width: 44px;
+  }
+
+  .skill-card strong {
+    font-size: 24px;
   }
 
   .service-layout > img,
