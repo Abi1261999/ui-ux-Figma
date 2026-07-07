@@ -58,7 +58,7 @@ main {
   align-items: center;
   background: #f9f4f0;
   display: flex;
-  font-size: 13px;
+  font-size: 16px;
   gap: 32px;
   justify-content: space-between;
   margin-inline: auto;
@@ -69,8 +69,11 @@ main {
 }
 
 .brand {
+  color: #2f2f2f;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.05em;
+  line-height: 1;
   min-width: max-content;
 }
 
@@ -80,8 +83,14 @@ main {
   flex: 1;
   gap: clamp(18px, 3.2vw, 44px);
   justify-content: center;
-  color: #57514b;
+  color: #3b3937;
+  font-size: 15px;
+  font-weight: 600;
   text-transform: capitalize;
+}
+
+.site-header nav a:first-child {
+  font-weight: 800;
 }
 
 .pill-button,
@@ -111,6 +120,8 @@ main {
 }
 
 .pill-button {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
   min-height: 48px;
   min-width: max-content;
   padding: 0 24px;
@@ -856,11 +867,12 @@ textarea {
 
   .site-header nav {
     column-gap: 16px;
-    font-size: 12px;
+    font-size: 14px;
     row-gap: 10px;
   }
 
   .pill-button {
+    font-size: 13px;
     min-height: 38px;
     padding: 0 16px;
   }
