@@ -4,24 +4,30 @@ import SectionLabel from './SectionLabel';
 function ServicesSection() {
   return (
     <section className="services" id="services">
-      <SectionLabel>My Services</SectionLabel>
       <div className="section-heading">
-        <h2>Unmatched Services for Your Needs</h2>
+        <div>
+          <SectionLabel>My Services</SectionLabel>
+          <h2>Unmatched Services for Your Needs</h2>
+        </div>
         <a className="dark-button" href="#contact">
-          Want a Project
+          Start&nbsp;&nbsp;a Project
         </a>
       </div>
       <div className="service-layout">
         <img src={images.service} alt="UX planning session with notes" />
         <div className="service-list">
           {services.map((service, index) => (
-            <article key={`${service}-${index}`}>
+            <article className={index === 0 ? 'active' : ''} key={`${service.title}-${index}`}>
               <div>
-                <h3>{service}</h3>
-                <p>
-                  End-to-end design support from research and wireframes to
-                  polished interfaces.
-                </p>
+                <h3>{service.title}</h3>
+                {service.description ? <p>{service.description}</p> : null}
+                {service.bullets ? (
+                  <ul>
+                    {service.bullets.map((bullet, bulletIndex) => (
+                      <li key={`${bullet}-${bulletIndex}`}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
               <span>{String(index + 1).padStart(2, '0')}</span>
             </article>

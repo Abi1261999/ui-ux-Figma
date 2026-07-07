@@ -9,7 +9,7 @@ function SkillsSection() {
       <div className="skill-grid">
         {skills.map((skill) => (
           <article className="skill-card" key={skill.label}>
-            <span style={{ '--skill-color': skill.color }}>{skill.label.slice(0, 2)}</span>
+            <img src={skill.icon} alt={`${skill.label} icon`} />
             <strong>{skill.label}</strong>
           </article>
         ))}

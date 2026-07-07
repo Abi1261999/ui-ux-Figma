@@ -5,11 +5,17 @@ import realEstateProject from '../assets/projects/frame17/frame17-source-1.png';
 import managementProject from '../assets/projects/frame19/frame19-source-3.png';
 import fashionShopProject from '../assets/projects/frame19/frame19-source-2.png';
 import petProject from '../assets/projects/frame19/frame19-source-1.png';
+import figmaIcon from '../assets/skills/figma-icon.png';
+import xdIcon from '../assets/skills/xd-icon.png';
+import afterEffectsIcon from '../assets/skills/after-effects-icon.png';
+import photoshopIcon from '../assets/skills/photoshop-icon.png';
+import html5Icon from '../assets/skills/html5-icon.png';
+import css3Icon from '../assets/skills/css3-icon.png';
+import serviceImage from '../assets/services/services-image-source-1.png';
 
 export const images = {
   profile: heroPortrait,
-  service:
-    'https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=900&q=80',
+  service: serviceImage,
   testimonial:
     'https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=900&q=80',
 };
@@ -69,18 +75,31 @@ export const projects = [
 ];
 
 export const skills = [
-  { label: 'Figma', color: '#ff7262' },
-  { label: 'Xd', color: '#ff61f6' },
-  { label: 'Ae', color: '#9f7aea' },
-  { label: 'Ps', color: '#31a8ff' },
-  { label: 'Html5', color: '#f16529' },
-  { label: 'Css3', color: '#2965f1' },
+  { label: 'figma', icon: figmaIcon },
+  { label: 'Xd', icon: xdIcon },
+  { label: 'Af effects', icon: afterEffectsIcon },
+  { label: 'Photoshop', icon: photoshopIcon },
+  { label: 'html5', icon: html5Icon },
+  { label: 'Css3', icon: css3Icon },
 ];
 
 export const services = [
-  'User Experience (UX)',
-  'Research And Development',
-  'User Experience (UX)',
-  'Website Optimization',
-  'User Interface (UI) Design',
+  {
+    title: 'User Experience (UX)',
+    description:
+      'A dedicated UI/UX designer passionate about creating captivating digital experiences. With a keen eye for detail and a love for problem-solving,',
+    bullets: ['Persona', 'Persona', 'Persona', 'Persona'],
+  },
+  {
+    title: 'Front-End Development',
+  },
+  {
+    title: 'User Experience (UX)',
+  },
+  {
+    title: 'Website Optimization',
+  },
+  {
+    title: 'User Interface (UI) Design',
+  },
 ];
