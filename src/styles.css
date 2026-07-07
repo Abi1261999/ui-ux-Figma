@@ -710,6 +710,33 @@ h2 {
   font-weight: 700;
 }
 
+.services-image-section {
+  margin-inline: auto;
+  max-width: 1280px;
+  position: relative;
+  width: min(1280px, calc(100% - 160px));
+}
+
+.services-image-section img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.services-image-button {
+  border-radius: 999px;
+  height: 6.4%;
+  position: absolute;
+  right: 0;
+  top: 9.5%;
+  width: 18.5%;
+}
+
+.services-image-button:focus-visible {
+  outline: 3px solid #2f90ff;
+  outline-offset: 4px;
+}
+
 .testimonial-card {
   align-items: center;
   display: grid;
@@ -908,6 +935,10 @@ textarea {
     padding: 48px 40px;
   }
 
+  .services-image-section {
+    width: calc(100% - 80px);
+  }
+
   .hero-center {
     display: none;
   }
@@ -1019,6 +1050,10 @@ textarea {
     gap: 32px;
     padding-bottom: 40px;
     padding-top: 40px;
+  }
+
+  .services-image-section {
+    width: calc(100% - 36px);
   }
 
   .portfolio-section .section-heading {
