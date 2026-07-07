@@ -1,28 +1,12 @@
-import { images } from '../data/portfolioData';
-import SectionLabel from './SectionLabel';
+import testimonialsSectionImage from '../assets/testimonials/testimonials-section-full.png';
 
 function TestimonialSection() {
   return (
-    <section className="testimonial-section">
-      <SectionLabel>Testimonials</SectionLabel>
-      <div className="section-heading">
-        <h2>What Our Client Says</h2>
-        <a className="dark-button" href="#contact">
-          Browse clients
-        </a>
-      </div>
-      <div className="testimonial-card">
-        <blockquote>
-          <span>"</span>
-          Working with Loujain was an absolute pleasure! Her exceptional talent
-          in UX/UI designs truly blew me away.
-          <footer>
-            <strong>Carolyn Wilbers</strong>
-            <small>Senior company officer</small>
-          </footer>
-        </blockquote>
-        <img src={images.testimonial} alt="Client portrait" />
-      </div>
+    <section className="testimonials-image-section">
+      <img src={testimonialsSectionImage} alt="Testimonials section" />
+      <a className="testimonial-client-button" href="#contact" aria-label="Become a Client" />
+      <button className="testimonial-swipe testimonial-swipe-prev" type="button" aria-label="Previous testimonial" />
+      <button className="testimonial-swipe testimonial-swipe-next" type="button" aria-label="Next testimonial" />
     </section>
   );
 }
