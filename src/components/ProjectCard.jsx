@@ -3,27 +3,17 @@ function ProjectCard({ project }) {
     <article className="project-card">
       <div className="project-heading">
         <span>{project.number}</span>
-        <div>
-          <h3>{project.title}</h3>
-          <p>{project.category}</p>
-        </div>
-      </div>
-      <div className="mock-window" style={{ '--accent': project.accent }}>
-        <div className="mock-toolbar">
-          <i />
-          <i />
-          <i />
-        </div>
-        <div className="mock-body">
-          {project.mockup.map((item) => (
-            <div className="mock-row" key={item}>
-              <strong>{item}</strong>
-              <span />
-            </div>
+        <h3>{project.title}</h3>
+        <div className="project-tags">
+          {project.tags.map((tag) => (
+            <small key={tag}>{tag}</small>
           ))}
         </div>
       </div>
-      <button type="button">View Case</button>
+      <div className="project-image">
+        <img src={project.image} alt={project.imageAlt} />
+      </div>
+      <button type="button">View project</button>
     </article>
   );
 }
