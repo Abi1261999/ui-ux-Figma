@@ -128,7 +128,7 @@ function App() {
           <a href="#contact">Contact</a>
         </nav>
         <a className="pill-button" href="#contact">
-          Let's talk
+          Let's Connect
         </a>
       </header>
 

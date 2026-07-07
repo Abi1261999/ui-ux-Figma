@@ -45,7 +45,6 @@ main {
   overflow: hidden;
 }
 
-.site-header,
 .hero,
 .trusted,
 .portfolio-section,
@@ -59,24 +58,33 @@ main {
 }
 
 .site-header {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding-block: 22px;
+  background: #f9f4f0;
+  display: flex;
   font-size: 13px;
+  gap: 32px;
+  justify-content: space-between;
+  margin-inline: auto;
+  max-width: 1440px;
+  min-height: 80px;
+  padding: 16px 80px;
+  width: 100%;
 }
 
 .brand {
   font-weight: 800;
   letter-spacing: -0.05em;
+  min-width: max-content;
 }
 
 .site-header nav {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 3vw, 34px);
+  flex: 1;
+  gap: clamp(18px, 3.2vw, 44px);
+  justify-content: center;
   color: #57514b;
+  text-transform: capitalize;
 }
 
 .pill-button,
@@ -106,8 +114,9 @@ main {
 }
 
 .pill-button {
-  min-height: 34px;
-  padding: 0 18px;
+  min-height: 48px;
+  min-width: max-content;
+  padding: 0 24px;
 }
 
 .dark-button,
@@ -699,8 +708,17 @@ textarea {
 }
 
 @media (max-width: 920px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    padding: 16px 40px;
+  }
+
   .site-header nav {
-    display: none;
+    flex-basis: 100%;
+    gap: 18px;
+    justify-content: flex-start;
+    order: 3;
   }
 
   .hero,
@@ -737,7 +755,6 @@ textarea {
 }
 
 @media (max-width: 640px) {
-  .site-header,
   .hero,
   .trusted,
   .portfolio-section,
@@ -746,6 +763,23 @@ textarea {
   .testimonial-section,
   .contact {
     padding-inline: 18px;
+  }
+
+  .site-header {
+    gap: 12px;
+    min-height: auto;
+    padding: 12px 18px;
+  }
+
+  .site-header nav {
+    column-gap: 16px;
+    font-size: 12px;
+    row-gap: 10px;
+  }
+
+  .pill-button {
+    min-height: 38px;
+    padding: 0 16px;
   }
 
   .section-heading {
