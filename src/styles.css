@@ -400,19 +400,45 @@ h2 {
 }
 
 .trusted {
-  padding-bottom: 64px;
+  align-items: stretch;
+  background: #f9f4f0;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: flex-start;
+  max-width: 1440px;
+  min-height: 240px;
+  padding: 56px 80px;
+  width: 100%;
+}
+
+.trusted .section-label {
+  color: #302d2a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+}
+
+.trusted .section-label span {
+  background: #302d2a;
+  width: 32px;
 }
 
 .logo-row {
   align-items: center;
-  border-bottom: 1px solid rgba(82, 74, 68, 0.09);
-  border-top: 1px solid rgba(82, 74, 68, 0.09);
-  color: #b0a49a;
   display: flex;
-  flex-wrap: wrap;
-  gap: 36px;
-  justify-content: space-between;
-  padding: 22px 0;
+  justify-content: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.logo-row img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .section-heading {
@@ -806,6 +832,11 @@ textarea {
     width: 100%;
   }
 
+  .trusted {
+    min-height: auto;
+    padding: 48px 40px;
+  }
+
   .hero-center {
     display: none;
   }
@@ -891,6 +922,26 @@ textarea {
   .hero {
     min-height: auto;
     padding: 32px 18px 44px;
+  }
+
+  .trusted {
+    gap: 32px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  .trusted .section-label {
+    font-size: 17px;
+  }
+
+  .logo-row {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .logo-row img {
+    min-width: 720px;
   }
 
   .role-card {

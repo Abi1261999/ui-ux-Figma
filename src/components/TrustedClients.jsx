@@ -1,15 +1,15 @@
 import SectionLabel from './SectionLabel';
-
-const trustedBrands = ['vencer', 'Lenovo', 'Slack', 'Dribbble', 'amazon', 'Google', 'Microsoft'];
+import companyLogos from '../assets/company-logos.png';
 
 function TrustedClients() {
   return (
     <section className="trusted">
-      <SectionLabel>I get trusted clients</SectionLabel>
-      <div className="logo-row" aria-label="Trusted brands">
-        {trustedBrands.map((brand) => (
-          <span key={brand}>{brand}</span>
-        ))}
+      <SectionLabel>+240 satisfied clients</SectionLabel>
+      <div className="logo-row">
+        <img
+          src={companyLogos}
+          alt="Company logos for Verizon, Lenovo, Slack, YouTube, Amazon, Google, and Microsoft"
+        />
       </div>
     </section>
   );
