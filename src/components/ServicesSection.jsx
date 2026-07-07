@@ -4,13 +4,11 @@ import SectionLabel from './SectionLabel';
 function ServicesSection() {
   return (
     <section className="services" id="services">
-      <div className="services-header">
-        <div className="services-header-copy">
-          <SectionLabel>My Services</SectionLabel>
-          <h2>Unmatched Services for Your Needs</h2>
-        </div>
+      <SectionLabel>My Services</SectionLabel>
+      <div className="section-heading">
+        <h2>Unmatched Services for Your Needs</h2>
         <a className="dark-button" href="#contact">
-          Start&nbsp;&nbsp;a Project
+          Want a Project
         </a>
       </div>
       <div className="service-layout">
