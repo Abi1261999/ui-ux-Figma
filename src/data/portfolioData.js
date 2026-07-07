@@ -11,7 +11,7 @@ import afterEffectsIcon from '../assets/skills/after-effects-icon.png';
 import photoshopIcon from '../assets/skills/photoshop-icon.png';
 import html5Icon from '../assets/skills/html5-icon.png';
 import css3Icon from '../assets/skills/css3-icon.png';
-import serviceImage from '../assets/services/services-image-source-1.png';
+import serviceImage from '../assets/services/services-panel.png';
 
 export const images = {
   profile: heroPortrait,
