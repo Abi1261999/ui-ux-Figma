@@ -789,43 +789,31 @@ h2 {
   outline-offset: 4px;
 }
 
-.cta {
-  align-items: center;
-  background:
-    radial-gradient(circle at center, rgba(255, 255, 255, 0.08) 0 22%, transparent 23% 100%),
-    #292827;
-  color: #fff9f2;
-  display: grid;
-  min-height: 260px;
-  place-items: center;
+.cta-image-section {
+  margin-inline: auto;
+  max-width: 1440px;
   position: relative;
-  text-align: center;
+  width: 100%;
 }
 
-.cta::before,
-.cta::after {
-  color: rgba(255, 255, 255, 0.42);
-  content: "+";
-  font-size: 24px;
+.cta-image-section img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.cta-image-button {
+  border-radius: 999px;
+  height: 12%;
+  left: 39.3%;
   position: absolute;
+  top: 49.6%;
+  width: 21.4%;
 }
 
-.cta::before {
-  left: 18%;
-  top: 34%;
-}
-
-.cta::after {
-  right: 18%;
-  top: 40%;
-}
-
-.cta p {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4vw, 4rem);
-  font-weight: 700;
-  letter-spacing: -0.05em;
-  margin-bottom: 18px;
+.cta-image-button:focus-visible {
+  outline: 3px solid #2f90ff;
+  outline-offset: 4px;
 }
 
 .contact {

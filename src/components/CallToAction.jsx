@@ -1,10 +1,10 @@
+import ctaImage from '../assets/cta/contact-cta.png';
+
 function CallToAction() {
   return (
-    <section className="cta">
-      <p>Let's Get In Touch</p>
-      <a className="light-button" href="#contact">
-        Discuss a Case
-      </a>
+    <section className="cta-image-section">
+      <img src={ctaImage} alt="Let's Get In Touch" />
+      <a className="cta-image-button" href="#contact" aria-label="Become a Client" />
     </section>
   );
 }
