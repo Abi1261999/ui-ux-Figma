@@ -717,28 +717,23 @@ h2 {
   grid-template-columns: minmax(0, 624px) minmax(0, 624px);
 }
 
-.service-image-panel {
+.service-layout > img {
   background: #3333331a;
   border: 1px solid #686665;
   border-radius: 24px;
   height: 659px;
-  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
   width: 624px;
 }
 
-.service-image-panel img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
 .service-list {
+  background: rgba(255, 255, 255, 0.28);
   display: grid;
   height: 659px;
 }
 
-.service-item {
+.service-list article {
   align-items: start;
   border-bottom: 1px solid rgba(104, 102, 101, 0.24);
   display: grid;
@@ -747,11 +742,11 @@ h2 {
   padding: 38px 48px;
 }
 
-.service-item:last-child {
+.service-list article:last-child {
   border-bottom: 0;
 }
 
-.service-item.active {
+.service-list article.active {
   min-height: 236px;
 }
 
@@ -997,15 +992,10 @@ textarea {
     width: 100%;
   }
 
-  .service-image-panel {
+  .service-layout > img {
     height: auto;
     max-height: 659px;
     width: 100%;
-  }
-
-  .service-image-panel img {
-    aspect-ratio: 624 / 659;
-    height: auto;
   }
 
   .service-list {
@@ -1154,7 +1144,7 @@ textarea {
     gap: 24px;
   }
 
-  .service-item {
+  .service-list article {
     padding: 28px 20px;
   }
 
