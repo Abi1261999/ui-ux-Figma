@@ -665,21 +665,19 @@ h2 {
 }
 
 .services {
-  background: #f9f4f0;
-  display: grid;
-  gap: 40px;
   max-width: 1280px;
-  min-height: 1005px;
-  padding: 56px 0;
-  width: min(1280px, calc(100% - 160px));
 }
 
-.services .section-heading {
+.services-header {
   align-items: center;
-  margin-bottom: 0;
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  min-height: 194px;
+  width: 100%;
 }
 
-.services .section-heading > div {
+.services-header-copy {
   max-width: 620px;
 }
 
@@ -703,7 +701,7 @@ h2 {
   max-width: 620px;
 }
 
-.services .dark-button {
+.services-header .dark-button {
   font-family: Georgia, "Times New Roman", serif;
   font-size: 17px;
   min-height: 64px;
@@ -713,84 +711,48 @@ h2 {
 
 .service-layout {
   display: grid;
-  gap: 32px;
-  grid-template-columns: minmax(0, 624px) minmax(0, 624px);
+  gap: 38px;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(320px, 1fr);
 }
 
-.service-image-panel {
-  background: #3333331a;
-  border: 1px solid #686665;
-  border-radius: 24px;
-  height: 659px;
-  overflow: hidden;
-  width: 624px;
-}
-
-.service-image-panel img {
-  display: block;
-  height: 100%;
+.service-layout > img {
+  border-radius: 18px;
+  height: 560px;
   object-fit: cover;
   width: 100%;
 }
 
 .service-list {
-  display: grid;
-  height: 659px;
+  border-top: 1px solid rgba(74, 66, 58, 0.16);
 }
 
-.service-item {
-  align-items: start;
-  border-bottom: 1px solid rgba(104, 102, 101, 0.24);
-  display: grid;
+.service-list article {
+  align-items: center;
+  border-bottom: 1px solid rgba(74, 66, 58, 0.16);
+  display: flex;
   gap: 24px;
-  grid-template-columns: minmax(0, 1fr) auto;
-  padding: 38px 48px;
+  justify-content: space-between;
+  min-height: 112px;
+  padding: 24px 0;
 }
 
-.service-item:last-child {
-  border-bottom: 0;
-}
-
-.service-item.is-open {
-  min-height: 236px;
-}
-
-.service-copy h3 {
-  color: #383431;
+.service-list h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.9rem, 3vw, 2.6rem);
-  line-height: 1;
-  margin-bottom: 18px;
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  margin-bottom: 8px;
 }
 
-.service-copy h3::before {
-  content: "-- ";
-  font-weight: 400;
+.service-list p {
+  color: #8f8379;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-bottom: 0;
+  max-width: 460px;
 }
 
-.service-copy p {
-  color: #7d7771;
-  font-size: 14px;
-  line-height: 1.45;
-  margin-bottom: 16px;
-  max-width: 520px;
-}
-
-.service-copy ul {
-  color: #7d7771;
-  display: grid;
-  font-size: 14px;
-  gap: 10px 72px;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  line-height: 1.2;
-  margin: 0;
-  padding-left: 18px;
-}
-
-.service-item > span {
-  color: #b8b2ac;
-  font-size: 28px;
-  line-height: 1;
+.service-list span {
+  color: #b4a89f;
+  font-weight: 700;
 }
 
 .testimonial-card {
@@ -991,25 +953,8 @@ textarea {
     padding: 48px 40px;
   }
 
-  .services {
-    min-height: auto;
-    padding: 48px 40px;
-    width: 100%;
-  }
-
-  .service-image-panel {
-    height: auto;
-    max-height: 659px;
-    width: 100%;
-  }
-
-  .service-image-panel img {
-    aspect-ratio: 624 / 659;
-    height: auto;
-  }
-
-  .service-list {
-    height: auto;
+  .services-header {
+    min-height: 174px;
   }
 
   .hero-center {
@@ -1125,15 +1070,10 @@ textarea {
     padding-top: 40px;
   }
 
-  .services {
-    gap: 32px;
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-
-  .services .section-heading {
+  .services-header {
     align-items: flex-start;
     flex-direction: column;
+    min-height: 194px;
   }
 
   .services h2 {
@@ -1144,30 +1084,10 @@ textarea {
     font-size: 17px;
   }
 
-  .services .dark-button {
+  .services-header .dark-button {
     min-height: 52px;
     min-width: 0;
     width: 100%;
-  }
-
-  .service-layout {
-    gap: 24px;
-  }
-
-  .service-item {
-    padding: 28px 20px;
-  }
-
-  .service-copy h3 {
-    font-size: clamp(1.6rem, 8vw, 2.3rem);
-  }
-
-  .service-copy ul {
-    gap: 10px 28px;
-  }
-
-  .service-item > span {
-    font-size: 22px;
   }
 
   .portfolio-section .section-heading {

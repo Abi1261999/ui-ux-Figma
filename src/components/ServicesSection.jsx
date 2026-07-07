@@ -1,30 +1,11 @@
 import { images, services } from '../data/portfolioData';
 import SectionLabel from './SectionLabel';
 
-function ServiceItem({ service, index }) {
-  return (
-    <article className={index === 0 ? 'service-item is-open' : 'service-item'}>
-      <div className="service-copy">
-        <h3>{service.title}</h3>
-        {service.description ? <p>{service.description}</p> : null}
-        {service.bullets ? (
-          <ul>
-            {service.bullets.map((bullet, bulletIndex) => (
-              <li key={`${bullet}-${bulletIndex}`}>{bullet}</li>
-            ))}
-          </ul>
-        ) : null}
-      </div>
-      <span>{String(index + 1).padStart(2, '0')}</span>
-    </article>
-  );
-}
-
 function ServicesSection() {
   return (
     <section className="services" id="services">
-      <div className="section-heading">
-        <div>
+      <div className="services-header">
+        <div className="services-header-copy">
           <SectionLabel>My Services</SectionLabel>
           <h2>Unmatched Services for Your Needs</h2>
         </div>
@@ -33,12 +14,19 @@ function ServicesSection() {
         </a>
       </div>
       <div className="service-layout">
-        <div className="service-image-panel">
-          <img src={images.service} alt="UX planning session with notes" />
-        </div>
+        <img src={images.service} alt="UX planning session with notes" />
         <div className="service-list">
           {services.map((service, index) => (
-            <ServiceItem service={service} index={index} key={`${service.title}-${index}`} />
+            <article key={`${service}-${index}`}>
+              <div>
+                <h3>{service}</h3>
+                <p>
+                  End-to-end design support from research and wireframes to
+                  polished interfaces.
+                </p>
+              </div>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+            </article>
           ))}
         </div>
       </div>
