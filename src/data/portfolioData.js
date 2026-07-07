@@ -2,9 +2,9 @@ import heroPortrait from '../assets/pdf-image-1.png';
 import portfolioProject from '../assets/projects/frame17/frame17-source-3.png';
 import fashionMobileProject from '../assets/projects/frame17/frame17-source-2.png';
 import realEstateProject from '../assets/projects/frame17/frame17-source-1.png';
-import managementProject from '../assets/projects/project-source-2.png';
-import fashionShopProject from '../assets/projects/project-source-4.png';
-import petProject from '../assets/projects/project-source-1.png';
+import managementProject from '../assets/projects/frame19/frame19-source-3.png';
+import fashionShopProject from '../assets/projects/frame19/frame19-source-2.png';
+import petProject from '../assets/projects/frame19/frame19-source-1.png';
 
 export const images = {
   profile: heroPortrait,
