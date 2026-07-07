@@ -1,43 +1,14 @@
-import SectionLabel from './SectionLabel';
+import contactSectionImage from '../assets/contact/contact-section.png';
 
 function ContactFooter() {
   return (
-    <footer className="contact" id="contact">
-      <div>
-        <SectionLabel>Testimonials</SectionLabel>
-        <h2>Let's Get in Touch</h2>
-        <p>
-          Have a question, feedback, or interested in collaboration? I would
-          love to hear from you.
-        </p>
-        <div className="contact-actions">
-          <a href="tel:+123456789">+1 234 567 89</a>
-          <a href="mailto:hello@example.com">Email me</a>
-        </div>
-      </div>
-      <form>
-        <label>
-          Name
-          <input type="text" name="name" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" />
-        </label>
-        <label className="full">
-          Notes
-          <textarea name="notes" rows="4" />
-        </label>
-        <button type="submit">Send a Message</button>
-      </form>
-      <nav className="footer-nav" aria-label="Footer links">
-        <a href="#hero">Pages</a>
-        <a href="#about">About</a>
-        <a href="#services">Service</a>
-        <a href="#portfolio">Project</a>
-        <a href="#contact">Blog</a>
-      </nav>
-    </footer>
+    <section className="contact-image-section" id="contact">
+      <img src={contactSectionImage} alt="Contact form section" />
+      <a className="contact-social contact-social-medium" href="https://medium.com" aria-label="Medium" />
+      <a className="contact-social contact-social-dripple" href="https://dribbble.com" aria-label="Dripple" />
+      <a className="contact-social contact-social-behance" href="https://behance.net" aria-label="Behance" />
+      <a className="contact-send-button" href="mailto:hello@example.com" aria-label="Send a Message" />
+    </section>
   );
 }
 

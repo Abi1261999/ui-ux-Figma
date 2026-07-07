@@ -888,6 +888,59 @@ textarea {
   padding-top: 28px;
 }
 
+.contact-image-section {
+  margin-inline: auto;
+  max-width: 1280px;
+  position: relative;
+  width: min(1280px, calc(100% - 160px));
+}
+
+.contact-image-section img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.contact-social,
+.contact-send-button {
+  position: absolute;
+}
+
+.contact-social {
+  border-radius: 999px;
+  height: 5.8%;
+  top: 78.3%;
+}
+
+.contact-social-medium {
+  left: 0;
+  width: 11.2%;
+}
+
+.contact-social-dripple {
+  left: 12.5%;
+  width: 10.8%;
+}
+
+.contact-social-behance {
+  left: 24.6%;
+  width: 10.8%;
+}
+
+.contact-send-button {
+  border-radius: 999px;
+  height: 10.8%;
+  left: 62.2%;
+  top: 67.1%;
+  width: 18.9%;
+}
+
+.contact-social:focus-visible,
+.contact-send-button:focus-visible {
+  outline: 3px solid #2f90ff;
+  outline-offset: 4px;
+}
+
 @media (max-width: 920px) {
   .site-header {
     flex-wrap: wrap;
@@ -988,6 +1041,10 @@ textarea {
   .testimonials-image-section {
     width: calc(100% - 80px);
   }
+
+  .contact-image-section {
+    width: calc(100% - 80px);
+  }
 }
 
 @media (max-width: 640px) {
@@ -1057,6 +1114,10 @@ textarea {
   }
 
   .testimonials-image-section {
+    width: calc(100% - 36px);
+  }
+
+  .contact-image-section {
     width: calc(100% - 36px);
   }
 
