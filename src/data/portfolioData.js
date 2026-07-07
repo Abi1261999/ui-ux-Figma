@@ -1,6 +1,7 @@
+import heroPortrait from '../assets/pdf-image-1.png';
+
 export const images = {
-  profile:
-    'https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?auto=format&fit=crop&w=900&q=80',
+  profile: heroPortrait,
   service:
     'https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=900&q=80',
   testimonial:

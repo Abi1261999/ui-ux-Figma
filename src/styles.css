@@ -172,10 +172,10 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(4.2rem, 8vw, 8.25rem);
-  line-height: 0.82;
-  margin-bottom: 24px;
-  max-width: 620px;
+  font-size: clamp(4rem, 6.55vw, 5.25rem);
+  line-height: 0.92;
+  margin-bottom: 32px;
+  max-width: 520px;
 }
 
 h2 {
@@ -187,152 +187,205 @@ h2 {
 .hero {
   background: #f9f4f0;
   display: grid;
-  gap: clamp(24px, 4vw, 56px);
-  grid-template-columns: minmax(0, 0.92fr) minmax(120px, 0.28fr) minmax(320px, 0.68fr);
+  gap: 40px;
+  grid-template-columns: minmax(460px, 0.88fr) minmax(410px, 0.72fr);
   justify-content: space-between;
   max-width: 1280px;
   min-height: 705px;
-  padding: 56px 0;
+  padding: 56px 0 56px;
   position: relative;
   width: min(1280px, calc(100% - 160px));
 }
 
 .hero-copy {
-  align-self: center;
+  align-self: start;
+  padding-top: 8px;
   position: relative;
   z-index: 2;
 }
 
 .hero-copy > p {
   color: #746c64;
-  font-size: 17px;
-  line-height: 1.55;
-  max-width: 430px;
+  font-size: clamp(1.05rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.18;
+  margin-bottom: 34px;
+  max-width: 520px;
 }
 
 .role-card {
   align-items: center;
-  background: #fff7ed;
-  border: 1px solid rgba(151, 128, 103, 0.28);
-  border-radius: 6px;
-  box-shadow: 0 16px 35px rgba(77, 58, 36, 0.08);
+  background: transparent;
+  border: 2px solid rgba(60, 57, 55, 0.68);
+  border-radius: 0;
+  box-shadow: none;
   display: flex;
-  gap: 18px;
+  gap: 0;
   margin: 0;
-  max-width: 420px;
-  min-height: 76px;
-  padding: 16px 22px;
+  max-width: 460px;
+  min-height: 94px;
+  padding: 18px 50px;
   position: relative;
+  width: min(460px, 100%);
 }
 
 .role-card::before,
-.role-card::after {
-  border: 2px solid #c69836;
+.role-card::after,
+.role-card strong::before,
+.role-card strong::after {
+  background: #f3cc60;
+  border: 2px solid rgba(60, 57, 55, 0.46);
   content: "";
-  height: 8px;
+  height: 18px;
   position: absolute;
-  width: 8px;
+  width: 18px;
 }
 
 .role-card::before {
-  bottom: -6px;
-  left: -6px;
+  left: -10px;
+  top: -10px;
 }
 
 .role-card::after {
-  bottom: -6px;
-  right: -6px;
-}
-
-.role-card span {
-  background: #bc8a33;
-  color: #fff;
-  display: grid;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
-  height: 50px;
-  place-items: center;
-  width: 38px;
+  right: -10px;
+  top: -10px;
 }
 
 .role-card strong {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.5rem, 3vw, 2.7rem);
+  color: #272727;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+  position: relative;
+}
+
+.role-card strong::before {
+  bottom: -31px;
+  left: -60px;
+}
+
+.role-card strong::after {
+  bottom: -31px;
+  right: -60px;
 }
 
 .hero-center {
-  align-self: center;
+  left: 52%;
   display: grid;
-  min-height: 430px;
+  position: absolute;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
   place-items: center;
 }
 
 .text-orbit {
   align-items: center;
-  border: 1px solid rgba(125, 111, 98, 0.2);
+  border: 0;
   border-radius: 999px;
-  color: #766c64;
+  color: #7d746c;
   display: flex;
-  font-size: 18px;
-  height: 230px;
+  font-size: 12px;
+  font-weight: 700;
+  height: 88px;
   justify-content: center;
-  letter-spacing: 0.36em;
+  letter-spacing: 0.22em;
   line-height: 1.1;
-  padding: 26px;
+  padding: 12px;
   text-align: center;
   text-transform: lowercase;
-  transform: rotate(90deg);
-  width: 230px;
+  transform: rotate(-24deg);
+  width: 88px;
 }
 
 .text-orbit::after {
   background: #c79a3e;
   border-radius: 50%;
   content: "";
-  height: 10px;
+  height: 16px;
   position: absolute;
-  width: 10px;
+  width: 16px;
 }
 
 .text-orbit span {
-  max-width: 150px;
+  max-width: 72px;
 }
 
 .hero-art {
-  align-self: center;
+  align-self: start;
   display: grid;
-  gap: 24px;
-  justify-items: start;
-  min-height: 560px;
+  justify-items: end;
+  min-height: 570px;
   position: relative;
+  z-index: 2;
 }
 
 .portrait-ring {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 0.82 / 1;
   background:
     linear-gradient(#f9efe8, #f9efe8) padding-box,
-    linear-gradient(140deg, rgba(122, 188, 196, 0.92), rgba(182, 142, 112, 0.5))
+    linear-gradient(160deg, rgba(132, 132, 132, 0.75), rgba(214, 208, 199, 0.55))
       border-box;
-  border: 12px solid transparent;
-  border-radius: 50%;
+  border: 3px solid transparent;
+  border-radius: 48% 48% 44% 44% / 38% 38% 48% 48%;
   box-shadow: 0 28px 70px rgba(93, 69, 55, 0.16);
   justify-self: end;
-  max-width: 430px;
+  max-width: 440px;
   overflow: hidden;
-  padding: 16px;
+  padding: 12px;
+  width: min(440px, 100%);
 }
 
 .portrait-ring img {
-  border-radius: 50%;
+  border-radius: 48% 48% 44% 44% / 38% 38% 48% 48%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 52% center;
   width: 100%;
 }
 
 .hero-button {
-  align-self: start;
   justify-self: start;
+  margin-top: 26px;
+  min-height: 60px;
+  min-width: 220px;
+  padding: 0 34px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.portrait-cta,
+.portrait-note {
+  background: #fffaf6;
+  border: 2px solid rgba(57, 55, 53, 0.42);
+  box-shadow: 4px 6px 0 rgba(38, 38, 38, 0.85);
+  color: #3a3836;
+  position: absolute;
+  z-index: 4;
+}
+
+.portrait-cta {
+  border-radius: 999px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1;
+  padding: 14px 18px;
+  right: 2px;
+  top: 72px;
+}
+
+.portrait-note {
+  border-radius: 12px;
+  bottom: 66px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 290px;
+  padding: 14px 20px;
+  right: 290px;
 }
 
 .trusted {
@@ -759,6 +812,16 @@ textarea {
     max-width: 360px;
   }
 
+  .portrait-cta {
+    right: 12px;
+    top: 42px;
+  }
+
+  .portrait-note {
+    bottom: 28px;
+    right: 220px;
+  }
+
   .role-card,
   .hero-button {
     grid-column: 1;
@@ -832,6 +895,21 @@ textarea {
     grid-row: auto;
     justify-self: center;
     max-width: min(100%, 330px);
+  }
+
+  .portrait-cta {
+    font-size: 13px;
+    padding: 11px 14px;
+    right: 4px;
+    top: 24px;
+  }
+
+  .portrait-note {
+    bottom: 18px;
+    font-size: 12px;
+    max-width: 230px;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   .role-card,
