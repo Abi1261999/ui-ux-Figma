@@ -1,6 +1,6 @@
 :root {
   color: #2d2926;
-  background: #f7f0ea;
+  background: #f9f4f0;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
@@ -19,10 +19,7 @@ html {
 body {
   margin: 0;
   min-width: 320px;
-  background:
-    radial-gradient(circle at 74% 6%, rgba(122, 188, 196, 0.28), transparent 12rem),
-    radial-gradient(circle at 45% 38%, rgba(249, 214, 169, 0.45), transparent 17rem),
-    linear-gradient(180deg, #f8f1eb 0%, #fbf6f0 58%, #f5eee7 100%);
+  background: #f9f4f0;
 }
 
 img {
@@ -45,7 +42,6 @@ main {
   overflow: hidden;
 }
 
-.site-header,
 .hero,
 .trusted,
 .portfolio-section,
@@ -59,24 +55,42 @@ main {
 }
 
 .site-header {
-  display: flex;
   align-items: center;
+  background: #f9f4f0;
+  display: flex;
+  font-size: 16px;
+  gap: 32px;
   justify-content: space-between;
-  gap: 24px;
-  padding-block: 22px;
-  font-size: 13px;
+  margin-inline: auto;
+  max-width: 1440px;
+  min-height: 80px;
+  padding: 16px 80px;
+  width: 100%;
 }
 
 .brand {
+  color: #2f2f2f;
+  font-size: 24px;
   font-weight: 800;
   letter-spacing: -0.05em;
+  line-height: 1;
+  min-width: max-content;
 }
 
 .site-header nav {
   display: flex;
   align-items: center;
-  gap: clamp(14px, 3vw, 34px);
-  color: #57514b;
+  flex: 1;
+  gap: clamp(18px, 3.2vw, 44px);
+  justify-content: center;
+  color: #3b3937;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.site-header nav a:first-child {
+  font-weight: 800;
 }
 
 .pill-button,
@@ -106,8 +120,11 @@ main {
 }
 
 .pill-button {
-  min-height: 34px;
-  padding: 0 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  min-height: 48px;
+  min-width: max-content;
+  padding: 0 24px;
 }
 
 .dark-button,
@@ -166,10 +183,10 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(3.1rem, 7.5vw, 6.8rem);
-  line-height: 0.89;
-  margin-bottom: 24px;
-  max-width: 620px;
+  font-size: clamp(4rem, 6.55vw, 5.25rem);
+  line-height: 0.92;
+  margin-bottom: 32px;
+  max-width: 520px;
 }
 
 h2 {
@@ -179,144 +196,207 @@ h2 {
 }
 
 .hero {
+  background: #f9f4f0;
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.8fr);
-  min-height: 620px;
-  padding-bottom: 52px;
-  padding-top: 52px;
+  gap: 40px;
+  grid-template-columns: minmax(460px, 0.88fr) minmax(410px, 0.72fr);
+  justify-content: space-between;
+  max-width: 1280px;
+  min-height: 705px;
+  padding: 56px 0 56px;
   position: relative;
+  width: min(1280px, calc(100% - 160px));
 }
 
 .hero-copy {
-  align-self: center;
+  align-self: start;
+  padding-top: 8px;
   position: relative;
   z-index: 2;
 }
 
 .hero-copy > p {
   color: #746c64;
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: clamp(1.05rem, 1.5vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.18;
+  margin-bottom: 34px;
   max-width: 520px;
 }
 
 .role-card {
   align-items: center;
-  background: #fff7ed;
-  border: 1px solid rgba(151, 128, 103, 0.28);
-  border-radius: 6px;
-  box-shadow: 0 16px 35px rgba(77, 58, 36, 0.08);
+  background: transparent;
+  border: 2px solid rgba(60, 57, 55, 0.68);
+  border-radius: 0;
+  box-shadow: none;
   display: flex;
-  gap: 18px;
-  margin: 28px 0;
-  max-width: 420px;
-  min-height: 76px;
-  padding: 16px 22px;
+  gap: 0;
+  margin: 0;
+  max-width: 460px;
+  min-height: 94px;
+  padding: 18px 50px;
   position: relative;
+  width: min(460px, 100%);
 }
 
 .role-card::before,
-.role-card::after {
-  border: 2px solid #c69836;
+.role-card::after,
+.role-card strong::before,
+.role-card strong::after {
+  background: #f3cc60;
+  border: 2px solid rgba(60, 57, 55, 0.46);
   content: "";
-  height: 8px;
+  height: 18px;
   position: absolute;
-  width: 8px;
+  width: 18px;
 }
 
 .role-card::before {
-  bottom: -6px;
-  left: -6px;
+  left: -10px;
+  top: -10px;
 }
 
 .role-card::after {
-  bottom: -6px;
-  right: -6px;
-}
-
-.role-card span {
-  background: #bc8a33;
-  color: #fff;
-  display: grid;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 38px;
-  height: 50px;
-  place-items: center;
-  width: 38px;
+  right: -10px;
+  top: -10px;
 }
 
 .role-card strong {
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.5rem, 3vw, 2.7rem);
-}
-
-.hero-art {
-  align-self: center;
-  min-height: 560px;
+  color: #272727;
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
   position: relative;
 }
 
+.role-card strong::before {
+  bottom: -31px;
+  left: -60px;
+}
+
+.role-card strong::after {
+  bottom: -31px;
+  right: -60px;
+}
+
+.hero-center {
+  left: 52%;
+  display: grid;
+  position: absolute;
+  top: 51%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  place-items: center;
+}
+
+.text-orbit {
+  align-items: center;
+  border: 0;
+  border-radius: 999px;
+  color: #7d746c;
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  height: 88px;
+  justify-content: center;
+  letter-spacing: 0.22em;
+  line-height: 1.1;
+  padding: 12px;
+  text-align: center;
+  text-transform: lowercase;
+  transform: rotate(-24deg);
+  width: 88px;
+}
+
+.text-orbit::after {
+  background: #c79a3e;
+  border-radius: 50%;
+  content: "";
+  height: 16px;
+  position: absolute;
+  width: 16px;
+}
+
+.text-orbit span {
+  max-width: 72px;
+}
+
+.hero-art {
+  align-self: start;
+  display: grid;
+  justify-items: end;
+  min-height: 570px;
+  position: relative;
+  z-index: 2;
+}
+
 .portrait-ring {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 0.82 / 1;
   background:
     linear-gradient(#f9efe8, #f9efe8) padding-box,
-    linear-gradient(140deg, rgba(122, 188, 196, 0.92), rgba(182, 142, 112, 0.5))
+    linear-gradient(160deg, rgba(132, 132, 132, 0.75), rgba(214, 208, 199, 0.55))
       border-box;
-  border: 12px solid transparent;
-  border-radius: 50%;
+  border: 3px solid transparent;
+  border-radius: 48% 48% 44% 44% / 38% 38% 48% 48%;
   box-shadow: 0 28px 70px rgba(93, 69, 55, 0.16);
-  margin-left: auto;
-  max-width: 520px;
+  justify-self: end;
+  max-width: 440px;
   overflow: hidden;
-  padding: 16px;
+  padding: 12px;
+  width: min(440px, 100%);
 }
 
 .portrait-ring img {
-  border-radius: 50%;
+  border-radius: 48% 48% 44% 44% / 38% 38% 48% 48%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 52% center;
   width: 100%;
 }
 
-.sun-badge {
-  align-items: center;
+.hero-button {
+  justify-self: start;
+  margin-top: 26px;
+  min-height: 60px;
+  min-width: 220px;
+  padding: 0 34px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.portrait-cta,
+.portrait-note {
   background: #fffaf6;
-  border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(92, 75, 58, 0.12);
-  color: #c89a42;
-  display: flex;
-  font-size: 42px;
-  height: 86px;
-  justify-content: center;
-  left: 10%;
+  border: 2px solid rgba(57, 55, 53, 0.42);
+  box-shadow: 4px 6px 0 rgba(38, 38, 38, 0.85);
+  color: #3a3836;
   position: absolute;
-  top: 36%;
-  width: 86px;
-  z-index: 3;
+  z-index: 4;
 }
 
-.sun-badge::before {
-  border: 2px dashed rgba(200, 154, 66, 0.28);
-  border-radius: inherit;
-  content: "";
-  inset: 10px;
-  position: absolute;
-}
-
-.floating-note {
-  background: rgba(255, 250, 246, 0.92);
-  border: 1px solid rgba(82, 74, 68, 0.14);
-  border-radius: 12px;
-  bottom: 86px;
-  box-shadow: 0 16px 35px rgba(70, 52, 39, 0.1);
-  color: #6f665f;
-  font-size: 12px;
-  line-height: 1.45;
-  max-width: 260px;
+.portrait-cta {
+  border-radius: 999px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1;
   padding: 14px 18px;
-  position: absolute;
-  right: 6%;
+  right: 2px;
+  top: 72px;
+}
+
+.portrait-note {
+  border-radius: 12px;
+  bottom: 66px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 290px;
+  padding: 14px 20px;
+  right: 290px;
 }
 
 .trusted {
@@ -699,8 +779,17 @@ textarea {
 }
 
 @media (max-width: 920px) {
+  .site-header {
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    padding: 16px 40px;
+  }
+
   .site-header nav {
-    display: none;
+    flex-basis: 100%;
+    gap: 18px;
+    justify-content: flex-start;
+    order: 3;
   }
 
   .hero,
@@ -711,20 +800,43 @@ textarea {
   }
 
   .hero {
-    padding-top: 26px;
+    gap: 28px;
+    min-height: auto;
+    padding: 40px;
+    width: 100%;
+  }
+
+  .hero-center {
+    display: none;
   }
 
   .hero-art {
-    min-height: 420px;
+    grid-template-columns: minmax(220px, 0.7fr) minmax(240px, 1fr);
+    min-height: auto;
+    align-items: center;
   }
 
   .portrait-ring {
-    margin-inline: auto;
-    max-width: 430px;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    justify-self: end;
+    max-width: 360px;
   }
 
-  .sun-badge {
-    left: 7%;
+  .portrait-cta {
+    right: 12px;
+    top: 42px;
+  }
+
+  .portrait-note {
+    bottom: 28px;
+    right: 220px;
+  }
+
+  .role-card,
+  .hero-button {
+    grid-column: 1;
+    justify-self: start;
   }
 
   .project-grid {
@@ -737,7 +849,6 @@ textarea {
 }
 
 @media (max-width: 640px) {
-  .site-header,
   .hero,
   .trusted,
   .portfolio-section,
@@ -746,6 +857,24 @@ textarea {
   .testimonial-section,
   .contact {
     padding-inline: 18px;
+  }
+
+  .site-header {
+    gap: 12px;
+    min-height: auto;
+    padding: 12px 18px;
+  }
+
+  .site-header nav {
+    column-gap: 16px;
+    font-size: 14px;
+    row-gap: 10px;
+  }
+
+  .pill-button {
+    font-size: 13px;
+    min-height: 38px;
+    padding: 0 16px;
   }
 
   .section-heading {
@@ -761,15 +890,47 @@ textarea {
 
   .hero {
     min-height: auto;
+    padding: 32px 18px 44px;
   }
 
   .role-card {
     max-width: none;
   }
 
-  .floating-note {
-    bottom: 20px;
-    right: 0;
+  .hero-art {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+
+  .portrait-ring {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    max-width: min(100%, 330px);
+  }
+
+  .portrait-cta {
+    font-size: 13px;
+    padding: 11px 14px;
+    right: 4px;
+    top: 24px;
+  }
+
+  .portrait-note {
+    bottom: 18px;
+    font-size: 12px;
+    max-width: 230px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .role-card,
+  .hero-button {
+    grid-column: 1;
+  }
+
+  .hero-button {
+    justify-self: stretch;
   }
 
   .project-card {
