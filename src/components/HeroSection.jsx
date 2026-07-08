@@ -1,17 +1,15 @@
-import { images } from '../data/portfolioData';
-import SectionLabel from './SectionLabel';
+import heroSectionImage from '../assets/hero/hero-section.png';
 
 function HeroSection() {
   return (
     <section className="hero" id="hero">
       <div className="hero-copy">
         <SectionLabel>Portflio</SectionLabel>
-        <h2>
+        <h1>
           Loujain
           <br />
-          
           Muhammed
-        </h2>
+        </h1>
         <p>
           Welcome to 'Designing where innovation knows no bounds. With a passion
           for pushing the boundaries of UI/UX design.

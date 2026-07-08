@@ -197,15 +197,43 @@ h2 {
 
 .hero {
   background: #f9f4f0;
-  display: grid;
-  gap: 40px;
-  grid-template-columns: minmax(460px, 0.88fr) minmax(410px, 0.72fr);
-  justify-content: space-between;
+  aspect-ratio: 1280 / 705;
   max-width: 1280px;
-  min-height: 705px;
-  padding: 56px 0 56px;
+  padding: 0;
   position: relative;
   width: min(1280px, calc(100% - 160px));
+}
+
+.hero > img {
+  height: auto;
+  width: 100%;
+}
+
+.hero-connect-button,
+.hero-client-button {
+  position: absolute;
+}
+
+.hero-connect-button {
+  border-radius: 999px;
+  height: 6.2%;
+  right: 0;
+  top: 7.9%;
+  width: 12.5%;
+}
+
+.hero-client-button {
+  border-radius: 999px;
+  height: 9%;
+  left: 0;
+  top: 73.7%;
+  width: 22.2%;
+}
+
+.hero-connect-button:focus-visible,
+.hero-client-button:focus-visible {
+  outline: 3px solid #2f90ff;
+  outline-offset: 4px;
 }
 
 .hero-copy {
@@ -1039,10 +1067,9 @@ textarea {
   }
 
   .hero {
-    gap: 28px;
     min-height: auto;
-    padding: 40px;
-    width: 100%;
+    padding: 0;
+    width: calc(100% - 80px);
   }
 
   .trusted {
@@ -1189,7 +1216,8 @@ textarea {
 
   .hero {
     min-height: auto;
-    padding: 32px 18px 44px;
+    padding: 0;
+    width: calc(100% - 36px);
   }
 
   .trusted {
