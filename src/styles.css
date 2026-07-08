@@ -2,6 +2,8 @@
   --site-bg: #f9f4f0;
   --focus-ring: #2f90ff;
   --motion-duration: 180ms;
+  --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --reveal-duration: 760ms;
   color: #2d2926;
   background: var(--site-bg);
   font-family:
@@ -45,21 +47,20 @@ main {
   overflow: hidden;
 }
 
-@keyframes section-fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(0.985);
+  transition:
+    opacity var(--reveal-duration) var(--motion-ease),
+    transform var(--reveal-duration) var(--motion-ease);
+  transition-delay: calc(var(--reveal-index, 0) * 55ms);
+  will-change: opacity, transform;
 }
 
-main > section,
-.site-footer {
-  animation: section-fade-up 520ms ease both;
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+  will-change: auto;
 }
 
 .hero,
@@ -113,6 +114,30 @@ main > section,
   font-weight: 800;
 }
 
+.site-header nav a {
+  position: relative;
+  transition: color var(--motion-duration) var(--motion-ease);
+}
+
+.site-header nav a::after {
+  background: currentColor;
+  bottom: -6px;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 260ms var(--motion-ease);
+  width: 100%;
+}
+
+.site-header nav a:hover::after,
+.site-header nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 .pill-button,
 .dark-button,
 .light-button,
@@ -127,8 +152,8 @@ main > section,
   font-weight: 700;
   line-height: 1;
   transition:
-    transform var(--motion-duration) ease,
-    box-shadow var(--motion-duration) ease;
+    transform var(--motion-duration) var(--motion-ease),
+    box-shadow var(--motion-duration) var(--motion-ease);
 }
 
 .pill-button,
@@ -169,6 +194,7 @@ main > section,
 .light-button:hover,
 .project-card button:hover,
 .contact button:hover {
+  box-shadow: 0 20px 38px rgba(39, 38, 36, 0.18);
   transform: translateY(-2px);
 }
 
@@ -267,9 +293,9 @@ h2 {
 .contact-social,
 .contact-send-button {
   transition:
-    box-shadow var(--motion-duration) ease,
-    outline-color var(--motion-duration) ease,
-    transform var(--motion-duration) ease;
+    box-shadow var(--motion-duration) var(--motion-ease),
+    outline-color var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
 }
 
 .portfolio-see-more-button:hover,
@@ -283,6 +309,18 @@ h2 {
   transform: translateY(-2px);
 }
 
+.hero-connect-button:active,
+.hero-client-button:active,
+.portfolio-see-more-button:active,
+.services-image-button:active,
+.testimonial-client-button:active,
+.testimonial-swipe:active,
+.cta-image-button:active,
+.contact-social:active,
+.contact-send-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
 .hero-connect-button,
 .hero-client-button {
   align-items: center;
@@ -293,8 +331,8 @@ h2 {
   line-height: 1;
   position: absolute;
   transition:
-    box-shadow var(--motion-duration) ease,
-    transform var(--motion-duration) ease;
+    box-shadow var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
   z-index: 3;
 }
 
@@ -704,6 +742,11 @@ h2 {
   height: 619px;
   overflow: hidden;
   padding: 0;
+  transition: transform 320ms var(--motion-ease);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
 }
 
 .project-heading {
@@ -763,7 +806,15 @@ h2 {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition:
+    filter 360ms var(--motion-ease),
+    transform 520ms var(--motion-ease);
   width: 100%;
+}
+
+.project-card:hover .project-image img {
+  filter: saturate(1.04) contrast(1.02);
+  transform: scale(1.035);
 }
 
 .project-card button {
@@ -823,12 +874,25 @@ h2 {
   min-height: 170px;
   padding: 34px 20px 30px;
   place-items: center;
+  transition:
+    box-shadow 320ms var(--motion-ease),
+    transform 320ms var(--motion-ease);
+}
+
+.skill-card:hover {
+  box-shadow: 0 44px 70px rgba(43, 37, 32, 0.12);
+  transform: translateY(-5px);
 }
 
 .skill-card img {
   height: 48px;
   object-fit: contain;
+  transition: transform 320ms var(--motion-ease);
   width: 48px;
+}
+
+.skill-card:hover img {
+  transform: scale(1.08) rotate(-2deg);
 }
 
 .skill-card strong {
@@ -1159,8 +1223,8 @@ textarea {
 
 .site-footer a {
   transition:
-    color var(--motion-duration) ease,
-    transform var(--motion-duration) ease;
+    color var(--motion-duration) var(--motion-ease),
+    transform var(--motion-duration) var(--motion-ease);
 }
 
 .site-footer a:hover {
