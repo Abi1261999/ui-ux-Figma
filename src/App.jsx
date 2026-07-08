@@ -7,8 +7,11 @@ import ServicesSection from './components/ServicesSection';
 import SkillsSection from './components/SkillsSection';
 import TestimonialSection from './components/TestimonialSection';
 import TrustedClients from './components/TrustedClients';
+import useScrollReveal from './hooks/useScrollReveal';
 
 function App() {
+  useScrollReveal();
+
   return (
     <main>
       <Header />
