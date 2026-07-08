@@ -552,30 +552,14 @@ h2 {
 }
 
 .portfolio-see-more-button {
-  align-items: center;
-  background: #060606;
+  background: transparent;
   border-radius: 999px;
-  box-shadow: 0 18px 34px rgba(39, 38, 36, 0.12);
-  color: #fffaf5;
-  display: inline-flex;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(0.76rem, 1.2vw, 1rem);
-  font-weight: 700;
   height: 27.6%;
-  justify-content: center;
-  line-height: 1;
   position: absolute;
   right: 0;
   top: 26.5%;
-  transition:
-    box-shadow 180ms ease,
-    transform 180ms ease;
   width: 14.3%;
   z-index: 3;
-}
-
-.portfolio-see-more-button:hover {
-  transform: translateY(-2px);
 }
 
 .portfolio-see-more-button:focus-visible {
