@@ -1,16 +1,13 @@
+import portfolioHeadingImage from '../assets/portfolio/portfolio-heading.png';
 import { projects } from '../data/portfolioData';
 import ProjectCard from './ProjectCard';
-import SectionLabel from './SectionLabel';
 
 function PortfolioSection() {
   return (
     <section className="portfolio-section" id="portfolio">
-      <div className="section-heading">
-        <div>
-          <SectionLabel>Latest Projects</SectionLabel>
-          <h2>Projects and practice</h2>
-        </div>
-        <a className="dark-button" href="#contact">
+      <div className="portfolio-heading-image">
+        <img src={portfolioHeadingImage} alt="Latest Projects - Projects and practice" />
+        <a className="portfolio-see-more-button" href="#contact">
           See More
         </a>
       </div>
