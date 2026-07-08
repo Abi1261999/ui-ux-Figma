@@ -6,11 +6,12 @@ function HeroSection() {
     <section className="hero" id="hero">
       <div className="hero-copy">
         <SectionLabel>Portflio</SectionLabel>
-        <h1>
+        <h2>
           Loujain
           <br />
+          
           Muhammed
-        </h1>
+        </h2>
         <p>
           Welcome to 'Designing where innovation knows no bounds. With a passion
           for pushing the boundaries of UI/UX design.
