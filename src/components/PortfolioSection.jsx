@@ -7,9 +7,7 @@ function PortfolioSection() {
     <section className="portfolio-section" id="portfolio">
       <div className="portfolio-heading-image">
         <img src={portfolioHeadingImage} alt="Latest Projects - Projects and practice" />
-        <a className="portfolio-see-more-button" href="#contact">
-          See More
-        </a>
+        <a className="portfolio-see-more-button" href="#contact" aria-label="See More" />
       </div>
       <div className="project-grid">
         {projects.map((project) => (
